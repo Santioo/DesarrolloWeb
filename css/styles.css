@@ -1,0 +1,461 @@
+/* General */
+* {
+    margin: 3px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+/* Header todas las páginas */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5C8A6F;
+    padding: 10px;
+    border-radius: 6px;
+}
+header h1 {
+    font-size: 1.5cm;
+}
+
+header h2 {
+    font-size: 0.7cm;
+}
+
+/* Body todas las páginas */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #dee3e1;
+    font-family: 'Roboto', Arial, sans-serif;
+
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Main todas las páginas */
+main {
+    flex: 1;
+}
+
+/* Todos los enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Párrafos dentro de divs en main (afecta textos del carrusel en main.html) */
+main div p {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    word-break: break-word;
+}
+
+/* Botones del carrusel de Bootstrap en main.html */
+.carousel-control-prev,
+        .carousel-control-next {
+            width: 25%; 
+        }
+
+/* Artículos informativos en main.html */
+article {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 6px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-end: 80px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+}
+
+/* Contenedor de las marcas en marcas.html */
+.container-marcas {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    border-radius: 100px;
+}
+
+/* Lista de marcas (imágenes y nombres) en marcas.html */
+.marcas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Cada marca individual en marcas.html */
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    margin-bottom: 24px; 
+}
+
+.marca p {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.marca img {
+    width: 100px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Contenedor de destacados y recientes en marcas.html */
+.destacados-recientes {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    margin-top: 20px;
+}
+
+/* Efecto hover para los cuadros de destacado y reciente en marcas.html */
+.destacado:hover, .reciente:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Cuadros de destacado y reciente en marcas.html */
+.destacado, .reciente {
+    width: 320px;
+    height: 320px;
+    background-color: lightgrey;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 16px;
+}
+
+/* Imágenes dentro de destacado y reciente en marcas.html */
+.destacado img, .reciente img {
+    width: 260px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* From Uiverse.io by bociKond LogIn */ 
+body:has(form.form) main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #58bc82;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+
+}
+
+.form .input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+  outline: 2px solid var(--clr);
+}
+
+.label {
+  align-self: flex-start;
+  color: var(--clr);
+  font-weight: 600;
+}
+
+.form .submit {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form .submit:hover {
+  background-color: var(--clr);
+  color: var(--bg-dark);
+}
+
+.span {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.span a {
+  color: var(--clr);
+}
+
+/* From Uiverse.io by Yaya12085  SignUp*/ 
+body:has(form.form) main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaeaea;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  color: #58bc82;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #58bc82;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: #58bc82;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: #58bc82;
+}
+
+.signin a:hover {
+  text-decoration: underline #58bc82;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: #58bc82;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: #58bc82;
+}
+
+/* ----------- CATÁLOGO DE AUTOS (todas las páginas de marcas) ----------- */
+/* Contenedor de autos en audi.html, bmw.html, etc. */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content:  center;
+    margin: 32px 0;
+}
+
+/* Cada auto individual en audi.html, bmw.html, etc. */
+.auto {
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px 20px 12px;
+    transition: box-shadow 0.2s;
+}
+
+.auto:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.auto img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 12px;
+    object-fit: contain;
+}
+
+.marca-nombre {
+    color: #888;
+    font-size: 1.1em;
+    margin-bottom: 2px;
+    align-self: flex-start;
+}
+
+.auto h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0 0 2px 0;
+    align-self: flex-start;
+}
+
+.boton {
+    width: 100%;
+    padding: 8px 0;
+    border: 1.5px solid #00aaff;
+    background: #fff;
+    color: #222;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1B3325;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
